@@ -93,31 +93,31 @@ function displaySingleArticle(article){
     }
     else{
         if(data_category === 'N'){
-            article_img = "../default_article_images/default_news.png";
+            article_img = "/the-pillar-frontend/default_article_images/default_news.png";
             article_img_alt = "Default News";
         }
         if(data_category === 'NF'){
-            article_img = "../default_article_images/default_news_feature.png";
+            article_img = "/the-pillar-frontend/default_article_images/default_news_feature.png";
             article_img_alt = "Default News Feature";
         }
         if(data_category === 'F'){
-            article_img = "../default_article_images/default_feature.png";
+            article_img = "/the-pillar-frontend/default_article_images/default_feature.png";
             article_img_alt = "Default Feature";
         }
         if(data_category === 'O'){
-            article_img = "../default_article_images/default_opinion.png";
+            article_img = "/the-pillar-frontend/default_article_images/default_opinion.png";
             article_img_alt = "Default Opinion";
         }
         if(data_category === 'C'){
-            article_img = "../default_article_images/default_culture.png";
+            article_img = "/the-pillar-frontend/default_article_images/default_culture.png";
             article_img_alt = "Default Culture";
         }
         if(data_category === 'E'){
-            article_img = "../default_article_images/default_editorial.png";
+            article_img = "/the-pillar-frontend/default_article_images/default_editorial.png";
             article_img_alt = "Default Editorial";
         }
         if(data_category === 'CL'){
-            article_img = "../default_article_images/default_column.png";
+            article_img = "/the-pillar-frontend/default_article_images/default_column.png";
             article_img_alt = "Default Column";
         }
         
@@ -222,31 +222,31 @@ function displayMustRead(article){
     }
     else{
         if(data_category === 'N'){
-            article_img = "../default_article_images/default_news.png";
+            article_img = "/the-pillar-frontend/default_article_images/default_news.png";
             article_img_alt = "Default News";
         }
         if(data_category === 'NF'){
-            article_img = "../default_article_images/default_news_feature.png";
+            article_img = "/the-pillar-frontend/default_article_images/default_news_feature.png";
             article_img_alt = "Default News Feature";
         }
         if(data_category === 'F'){
-            article_img = "../default_article_images/default_feature.png";
+            article_img = "/the-pillar-frontend/default_article_images/default_feature.png";
             article_img_alt = "Default Feature";
         }
         if(data_category === 'O'){
-            article_img = "../default_article_images/default_opinion.png";
+            article_img = "/the-pillar-frontend/default_article_images/default_opinion.png";
             article_img_alt = "Default Opinion";
         }
         if(data_category === 'C'){
-            article_img = "../default_article_images/default_culture.png";
+            article_img = "/the-pillar-frontend/default_article_images/default_culture.png";
             article_img_alt = "Default Culture";
         }
         if(data_category === 'E'){
-            article_img = "../default_article_images/default_editorial.png";
+            article_img = "/the-pillar-frontend/default_article_images/default_editorial.png";
             article_img_alt = "Default Editorial";
         }
         if(data_category === 'CL'){
-            article_img = "../default_article_images/default_column.png";
+            article_img = "/the-pillar-frontend/default_article_images/default_column.png";
             article_img_alt = "Default Column";
         }
     }
@@ -273,5 +273,5 @@ function displayMustRead(article){
 
 function readArticle(article_id){
     localStorage.setItem('articleID', article_id);
-    window.location.href = 'http://127.0.0.1:5500/html/articleView.html';
+    window.location.href = '/the-pillar-frontend/html/articleView.html';
 }

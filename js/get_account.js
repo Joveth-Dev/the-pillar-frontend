@@ -1,4 +1,4 @@
-const domain = 'http://127.0.0.1:8000';
+const domain = 'web-production-db1d.up.railway.app';
 const refresh_url = domain + '/auth/jwt/refresh/';
 const user_url = domain + '/auth/users/me/';
 
@@ -70,7 +70,7 @@ async function fetchAccess(){
         }else{
             alert('Session expired, you need to log in again');
             localStorage.setItem('signed-up', true);
-            window.location.href = 'http://127.0.0.1:5500/index.html';
+            window.location.href = '/the-pillar-frontend/index.html';
         }
     }catch(error){
         console.log(error);
@@ -85,13 +85,13 @@ function displayProfileElements(user_data){
 
     if(!user_data.avatar){
         if(user_data.sex == 'N'){
-            profile_img = '../default_profile_imgs/default_no_sex.jpg';
+            profile_img = '/the-pillar-frontend/default_profile_imgs/default_no_sex.jpg';
         }
         if(user_data.sex == 'M'){
-            profile_img = '../default_profile_imgs/default_male.jpg';
+            profile_img = '/the-pillar-frontend/default_profile_imgs/default_male.jpg';
         }
         if(user_data.sex == 'F'){
-            profile_img = '../default_profile_imgs/default_female.jpg';
+            profile_img = '/the-pillar-frontend/default_profile_imgs/default_female.jpg';
         }
     }else{
         profile_img = user_data.avatar;
@@ -106,5 +106,5 @@ function displayProfileElements(user_data){
 }
 
 function loadProfile(){
-    window.location.href = 'http://127.0.0.1:5500/html/userProfile.html'
+    window.location.href = '/the-pillar-frontend/html/userProfile.html'
 }

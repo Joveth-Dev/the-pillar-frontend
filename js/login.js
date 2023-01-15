@@ -54,7 +54,7 @@ function getInputs(){
                 localStorage.setItem('refresh', data.refresh);
         
                 localStorage.removeItem('signed-up');
-                window.location.href = 'http://127.0.0.1:5500/index.html';
+                window.location.href = '/the-pillar-frontend/index.html';
             }else{
                 login_div.setAttribute('class', 'alert alert-danger d-flex align-items-center mt-1 d-block');
                 login_error.textContent = data.detail;

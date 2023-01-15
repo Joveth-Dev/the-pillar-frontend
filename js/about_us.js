@@ -50,17 +50,17 @@ function displayEB(json_response) {
             
             if (member.avatar === ''){
                 if(member.sex == 'N'){
-                    image_src = "../default_profile_imgs/default_no_sex.jpg";
+                    image_src = "/the-pillar-frontend/default_profile_imgs/default_no_sex.jpg";
                 }
                 if(member.sex == 'M'){
-                    image_src = "../default_profile_imgs/default_male.jpg";
+                    image_src = "/the-pillar-frontend/default_profile_imgs/default_male.jpg";
                 }
                 if(member.sex == 'F'){
-                    image_src = "../default_profile_imgs/default_female.jpg";
+                    image_src = "/the-pillar-frontend/default_profile_imgs/default_female.jpg";
                 }
             }
             else{
-                image_src = domain + member.avatar;
+                image_src = member.avatar;
             }
             eic_div.innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
                                     <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
@@ -74,17 +74,17 @@ function displayEB(json_response) {
         
         if (member.avatar == ''){
             if(member.sex == 'N'){
-                image_src = "../default_profile_imgs/default_no_sex.jpg";
+                image_src = "/the-pillar-frontend/default_profile_imgs/default_no_sex.jpg";
             }
             if(member.sex == 'M'){
-                image_src = "../default_profile_imgs/default_male.jpg";
+                image_src = "/the-pillar-frontend/default_profile_imgs/default_male.jpg";
             }
             if(member.sex == 'F'){
-                image_src = "../default_profile_imgs/default_female.jpg";
+                image_src = "/the-pillar-frontend/default_profile_imgs/default_female.jpg";
             }
         }
         else{
-            image_src = domain + member.avatar;
+            image_src = member.avatar;
         }
         if(other_eb_positions.includes(member.current_position)){
             other_eb_div.innerHTML += `<div class="col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer">
@@ -109,17 +109,17 @@ function displayOtherMembers(json_response) {
         
         if (member.avatar == ''){
             if(member.sex == 'N'){
-                image_src = "../default_profile_imgs/default_no_sex.jpg";
+                image_src = "/the-pillar-frontend/default_profile_imgs/default_no_sex.jpg";
             }
             if(member.sex == 'M'){
-                image_src = "../default_profile_imgs/default_male.jpg";
+                image_src = "/the-pillar-frontend/default_profile_imgs/default_male.jpg";
             }
             if(member.sex == 'F'){
-                image_src = "../default_profile_imgs/default_female.jpg";
+                image_src = "/the-pillar-frontend/default_profile_imgs/default_female.jpg";
             }
         }
         else{
-            image_src = domain + member.avatar;
+            image_src = member.avatar;
         }
         if(member.current_position == "Staff Writters"){
             staff_writer_div.innerHTML += `<div class="col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer">
@@ -167,17 +167,17 @@ function displayEBsection(json_response){
             
             if (member.avatar == ''){
                 if(member.sex == 'N'){
-                    image_src = "../default_profile_imgs/default_no_sex.jpg";
+                    image_src = "/the-pillar-frontend/default_profile_imgs/default_no_sex.jpg";
                 }
                 if(member.sex == 'M'){
-                    image_src = "../default_profile_imgs/default_male.jpg";
+                    image_src = "/the-pillar-frontend/default_profile_imgs/default_male.jpg";
                 }
                 if(member.sex == 'F'){
-                    image_src = "../default_profile_imgs/default_female.jpg";
+                    image_src = "/the-pillar-frontend/default_profile_imgs/default_female.jpg";
                 }
             }
             else{
-                image_src = domain + member.avatar;
+                image_src = member.avatar;
             }
             eic_div.innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
                                     <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
@@ -191,17 +191,17 @@ function displayEBsection(json_response){
         
         if (member.avatar == ''){
             if(member.sex == 'N'){
-                image_src = "../default_profile_imgs/default_no_sex.jpg";
+                image_src = "/the-pillar-frontend/default_profile_imgs/default_no_sex.jpg";
             }
             if(member.sex == 'M'){
-                image_src = "../default_profile_imgs/default_male.jpg";
+                image_src = "/the-pillar-frontend/default_profile_imgs/default_male.jpg";
             }
             if(member.sex == 'F'){
-                image_src = "../default_profile_imgs/default_female.jpg";
+                image_src = "/the-pillar-frontend/default_profile_imgs/default_female.jpg";
             }
         }
         else{
-            image_src = domain + member.avatar;
+            image_src = member.avatar;
         }
         if(other_eb_positions.includes(member.current_position)){
             other_eb_div.innerHTML += `<div class="col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer">
@@ -227,17 +227,17 @@ function displayOtherMembersSection(json_response){
         
         if (member.avatar == ''){
             if(member.sex == 'N'){
-                image_src = "../default_profile_imgs/default_no_sex.jpg";
+                image_src = "/the-pillar-frontend/default_profile_imgs/default_no_sex.jpg";
             }
             if(member.sex == 'M'){
-                image_src = "../default_profile_imgs/default_male.jpg";
+                image_src = "/the-pillar-frontend/default_profile_imgs/default_male.jpg";
             }
             if(member.sex == 'F'){
-                image_src = "../default_profile_imgs/default_female.jpg";
+                image_src = "/the-pillar-frontend/default_profile_imgs/default_female.jpg";
             }
         }
         else{
-            image_src = domain + member.avatar;
+            image_src = member.avatar;
         }
         if(member.current_position == "Staff Writters"){
             staff_writer_div.innerHTML += `<div class="col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer">

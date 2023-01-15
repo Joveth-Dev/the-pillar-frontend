@@ -1,7 +1,7 @@
-const refresh_url = 'http://127.0.0.1:8000/auth/jwt/refresh/';
-const profile_url = 'http://127.0.0.1:8000/userprofile/profiles/me/';
-const account_url = 'http://127.0.0.1:8000/auth/users/me/';
-const set_password_url = 'http://127.0.0.1:8000/auth/users/set_password/';
+const refresh_url = 'web-production-db1d.up.railway.app/auth/jwt/refresh/';
+const profile_url = 'web-production-db1d.up.railway.app/userprofile/profiles/me/';
+const account_url = 'web-production-db1d.up.railway.app/auth/users/me/';
+const set_password_url = 'web-production-db1d.up.railway.app/auth/users/set_password/';
 
 // for account
 var a_email, a_first_name, a_last_name, a_middle_initial;
@@ -85,7 +85,7 @@ async function fetchAccess(){
         }else{
             alert('Session expired, you need to log in again');
             localStorage.setItem('signed-up', true);
-            window.location.href = 'http://127.0.0.1:5500/index.html';
+            window.location.href = '/the-pillar-frontend/index.html';
         }
     }catch(error){
         console.log(error);
@@ -122,7 +122,7 @@ async function fetchAccount(access, account_url){
             fetchAccess()
             .then(data => {
                 localStorage.setItem('access', data.access);
-                window.location.href = 'http://127.0.0.1:5500/html/userProfile.html';
+                window.location.href = '/the-pillar-frontend/html/userProfile.html';
             })
             .catch(error => console.log(error))
         }
@@ -166,13 +166,13 @@ function displayAccount(account_data){
         // displaying user avatar
         if(!account_data.avatar){
             if(account_data.sex == 'N'){
-                avatar.setAttribute('src', '../default_profile_imgs/default_no_sex.jpg');
+                avatar.setAttribute('src', '/the-pillar-frontend/default_profile_imgs/default_no_sex.jpg');
             }
             if(account_data.sex == 'M'){
-                avatar.setAttribute('src', '../default_profile_imgs/default_male.jpg');
+                avatar.setAttribute('src', '/the-pillar-frontend/default_profile_imgs/default_male.jpg');
             }
             if(account_data.sex == 'F'){
-                avatar.setAttribute('src', '../default_profile_imgs/default_female.jpg');
+                avatar.setAttribute('src', '/the-pillar-frontend/default_profile_imgs/default_female.jpg');
             }
         }
         else{
@@ -196,7 +196,7 @@ async function fetchProfile(access, url){
             fetchAccess()
             .then(data => {
                 localStorage.setItem('access', data.access);
-                window.location.href = 'http://127.0.0.1:5500/html/userProfile.html';
+                window.location.href = '/the-pillar-frontend/html/userProfile.html';
             })
             .catch(error => console.log(error))
         }
@@ -306,7 +306,7 @@ function saveAccountChanges(){
                     console.log('fetching new access key...');
                 }else{
                     localStorage.setItem('a_updtd', true);
-                    window.location.href = 'http://127.0.0.1:5500/html/userProfile.html';
+                    window.location.href = '/the-pillar-frontend/html/userProfile.html';
                 }
             })
             .catch(error => console.log(error));
@@ -439,7 +439,7 @@ function editProfile(){
                             console.log('fetching new access key...');
                         }else{
                             localStorage.setItem('p_updtd', true);
-                            window.location.href = 'http://127.0.0.1:5500/html/userProfile.html';
+                            window.location.href = '/the-pillar-frontend/html/userProfile.html';
                         }
                     })
                     .catch(error => console.log(error));
@@ -529,7 +529,7 @@ function save(){
                 }
             }else{
                 localStorage.setItem('changed_pass', true);
-                window.location.href = 'http://127.0.0.1:5500/html/userProfile.html';
+                window.location.href = '/the-pillar-frontend/html/userProfile.html';
             }
         })
         .catch(error => console.log('fetching new access key...'));
@@ -628,7 +628,7 @@ function deleteAccount(){
             document.getElementById('delete-acc-error').textContent = 'Account Deleted!';
             setTimeout(() => {
                 localStorage.clear();
-                window.location.href = 'http://127.0.0.1:5500/index.html';
+                window.location.href = '/the-pillar-frontend/index.html';
             }, 2000);
         }
     })
@@ -727,7 +727,7 @@ function uploadProfilePicture(){
             document.getElementById('upload-div').setAttribute('class', 'alert alert-success d-flex flex-row justify-content-start align-items-start mt-1 d-block')
             document.getElementById('upload-error').textContent = 'Updated successfully!';
             setTimeout(() => {
-                window.location.href = 'http://127.0.0.1:5500/html/userProfile.html';
+                window.location.href = '/the-pillar-frontend/html/userProfile.html';
             }, 1500);
         }
     })
@@ -783,6 +783,6 @@ function cancelUpload(){
 function logout(){
     localStorage.clear();
     localStorage.setItem('signed-up', true);
-    window.location.href = 'http://127.0.0.1:5500/index.html'
+    window.location.href = '/the-pillar-frontend/index.html'
 }
 // ---------------------------------------------------------------------------------

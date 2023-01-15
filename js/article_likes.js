@@ -56,7 +56,7 @@ async function fetchLikes(access, method=null){
                     fetchAccess()
                     .then(data => {
                         localStorage.setItem('access', data.access);
-                        window.location.href = 'http://127.0.0.1:5500/html/articleView.html';
+                        window.location.href = '/the-pillar-frontend/html/articleView.html';
                     })
                     .catch(error => console.log(error))
                 }else{
@@ -131,7 +131,7 @@ async function fetchDislikes(access, method=null){
                     fetchAccess()
                     .then(data => {
                         localStorage.setItem('access', data.access);
-                        window.location.href = 'http://127.0.0.1:5500/html/articleView.html';
+                        window.location.href = '/the-pillar-frontend/html/articleView.html';
                     })
                     .catch(error => console.log(error))
                 }else{
@@ -205,7 +205,7 @@ function displayLikesAndDislikes(likes_data, dislikes_data){
                     globalThis.like_id = likes_data.results[i].id;
                 }
             }else{
-                window.location.href = 'http://127.0.0.1:5500/html/articleView.html'
+                window.location.href = '/the-pillar-frontend/html/articleView.html'
             }
         }
 
@@ -217,7 +217,7 @@ function displayLikesAndDislikes(likes_data, dislikes_data){
                     globalThis.dislike_id = dislikes_data.results[i].id;
                 }
             }else{
-                window.location.href = 'http://127.0.0.1:5500/html/articleView.html'
+                window.location.href = '/the-pillar-frontend/html/articleView.html'
             }
         }
         

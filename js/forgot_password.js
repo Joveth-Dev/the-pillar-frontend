@@ -1,4 +1,4 @@
-const reset_password_url = 'http://127.0.0.1:8000/auth/users/reset_password/';
+const reset_password_url = 'web-production-db1d.up.railway.app/auth/users/reset_password/';
 
 async function fetchEmail(email){
     try{
@@ -47,7 +47,7 @@ function sendEmail(){
         else{
             continue_msg.textContent = data.email;
             setTimeout(function() {
-                window.location.href = 'http://127.0.0.1:5500/html/forgotPass.html';
+                window.location.href = '/the-pillar-frontend/html/forgotPass.html';
               }, 2500);
         }
     })

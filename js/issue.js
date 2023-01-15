@@ -449,5 +449,5 @@ function displayIssuesByCategory(category){
 
 function readIssue(issue_id){
     localStorage.setItem('issueID', issue_id);
-    window.location.href = 'http://127.0.0.1:5500/html/issueView.html';
+    window.location.href = '/the-pillar-frontend/html/issueView.html';
 }
