@@ -1,4 +1,4 @@
-const reset_password_url = 'web-production-db1d.up.railway.app/auth/users/reset_password/';
+const reset_password_url = 'https://web-production-db1d.up.railway.app/auth/users/reset_password/';
 
 async function fetchEmail(email){
     try{

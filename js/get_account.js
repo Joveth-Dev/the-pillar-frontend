@@ -1,4 +1,4 @@
-const domain = 'web-production-db1d.up.railway.app';
+const domain = 'https://web-production-db1d.up.railway.app';
 const refresh_url = domain + '/auth/jwt/refresh/';
 const user_url = domain + '/auth/users/me/';
 

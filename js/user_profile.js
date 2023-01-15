@@ -1,7 +1,7 @@
-const refresh_url = 'web-production-db1d.up.railway.app/auth/jwt/refresh/';
-const profile_url = 'web-production-db1d.up.railway.app/userprofile/profiles/me/';
-const account_url = 'web-production-db1d.up.railway.app/auth/users/me/';
-const set_password_url = 'web-production-db1d.up.railway.app/auth/users/set_password/';
+const refresh_url = 'https://web-production-db1d.up.railway.app/auth/jwt/refresh/';
+const profile_url = 'https://web-production-db1d.up.railway.app/userprofile/profiles/me/';
+const account_url = 'https://web-production-db1d.up.railway.app/auth/users/me/';
+const set_password_url = 'https://web-production-db1d.up.railway.app/auth/users/set_password/';
 
 // for account
 var a_email, a_first_name, a_last_name, a_middle_initial;

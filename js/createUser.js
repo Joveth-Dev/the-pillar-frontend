@@ -1,6 +1,6 @@
-const users_url = 'web-production-db1d.up.railway.app/auth/users/';
-const profiles_url = 'web-production-db1d.up.railway.app/userprofile/profiles/me/';
-const login_url = 'web-production-db1d.up.railway.app/auth/jwt/create/';
+const users_url = 'https://web-production-db1d.up.railway.app/auth/users/';
+const profiles_url = 'https://web-production-db1d.up.railway.app/userprofile/profiles/me/';
+const login_url = 'https://web-production-db1d.up.railway.app/auth/jwt/create/';
 
 // glabal vars to confirm processes
 var account_created = false, logged_in = false, profile_created = false, account_updated = false;
