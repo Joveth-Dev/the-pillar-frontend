@@ -45,7 +45,7 @@ function displayEB(json_response) {
 
     // display Editor-in-Chief
     for(let member of json_response){
-        if (member.current_position == "Editor-in-chief"){
+        if (member.current_position == "Editor-in-Chief"){
             let image_src;
             
             if (member.avatar === ''){
@@ -162,7 +162,7 @@ function displayEBsection(json_response){
 
     // display Editor-in-Chief
     for(let member of json_response){
-        if (member.current_position == "Editor-in-chief"){
+        if (member.current_position == "Editor-in-Chief"){
             let image_src;
             
             if (member.avatar == ''){
