@@ -802,7 +802,7 @@ li.page-item.active{
 }
 
 .accordion-button::after {
-    background-image: url(/caret-up-fill.svg) !important;
+    background-image: url(/the-pillar-frontend/caret-up-fill.svg) !important;
 }
 
 /* CUSTOM CARD ISSUES */
