@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISSUES</title>
+
+
+
+      <!--Bootstrap Icons-->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+   
+      <!--Stylesheets-->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+      <link rel="stylesheet" href="/css/main.min.css">
+      <link rel="stylesheet" href="/css/custom.css">
+
+      
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md bg-primary justify-content-center d-flex flex-column" id="nav-main-links">
+
+        <!--first row-->
+       <div class="row container-xxl">
+  
+        <!--col for The Pillar Logo-->
+        <div class="col-6 col-md-3 d-flex justify-content-center align-items-center">
+     
+          <a class="navbar-brand nav-logo" href="/index.html">
+          <img src="/images/The Pillar Logo - white.png" class="nav-logo-img" alt="The Pillar">
+          </a>
+        </div>
+  
+  
+  
+        <!-- Button trigger modal -->
+        <div class="col-6 d-flex justify-content-end align-items-center" id="profile-btn-div">
+          <button type="button" class="btn p-0" data-bs-toggle="modal" data-bs-target="#exampleModal" id="modal-btn">
+              <i class="bi bi-person-circle text-secondary fs-1"></i>
+          </button>
+          <!-- <a href="html/userProfile.html">
+            <button type="button" class="btn p-0" data-bs-toggle="modal" data-bs-target="#exampleModal" id="modal-btn">
+              <div class="user-profile-img">
+                <img src="/images/1 claridette.jpg" alt="">
+              </div>
+            </button>
+          </a> -->
+        </div>
+        </div>
+      </nav>
+  
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Welcome, Reader!</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+               
+                <form action="" class=" border border-primary rounded p-5" id="log-in-form">
+      
+                  <div class="form-header text-center">
+                    <img src="/images/The Pillar Logo.png" class="w-25" alt="">
+                    <h2 class="fw-bold text-primary">LOG IN</h2>
+                  </div>
+            
+                  <label for="Username" class="fw-bold">Username</label>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-person-fill text-primary"></i></span>
+                    <input type="text" class="form-control" placeholder="Username" id="Username" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+            
+                  <label for="Password" class="fw-bold">Password</label>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"> <i class="bi bi-key-fill text-primary"></i></span>
+                    <input type="password" class="form-control" placeholder="Password" id="Password" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+
+                  <div class="alert alert-danger d-flex align-items-center mt-1 d-none" role="alert" id="login-div">
+                    <i class="bi bi-exclamation-diamond-fill pe-2"></i>
+                    <div id="login-error">
+                      <!-- LOGIN ERROR MESSAGE GO HERE -->
+                    </div>
+                  </div>
+            
+                  <button class="btn btn-primary col-12 fw-bold" type="button" onclick="getInputs()">LOG IN</button>
+                  <h6 class="mt-2 mb-4 text-center"> <a href="forgotPass.html" class="text-decoration-none">Forgot Password?</a> </h6>
+            
+                  <a class="btn btn-secondary col-12 fw-bold text-light" href="/html/sign-up.html">SIGN UP</a>
+                  </form>
+                  
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      
+        <!--end of Modal-->
+     
+  
+      <!--End of first Nav-->
+  
+  
+  
+        <!--Start of second nav-->
+        <nav class="navbar nav-pills nav-fill navbar-expand-sm d-flex justify-content-md-center bg-light bottom-shadow sticky-top"     
+        id="nav-links">
+
+
+
+        <button class="navbar-toggler w-100 d-flex justify-content-between ms-3 me-3 d-inline d-sm-none" type="button" data-bs-toggle="collapse"
+            data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fw-bold m-auto">Menu</span>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+  
+       
+        <div class="row container-lg">
+         <div class="col collapse navbar-collapse" id="main-nav">
+             <ul class="col navbar-nav fw-bold">
+               <li class="nav-item">
+                 <a class="nav-link nav-position" href="/index.html">HOME</a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link nav-position" href="/html/article.html">ARTICLES</a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link nav-position active" aria-current="page" href="/html/issue.html">ISSUES</a>
+               </li>
+               <li class="nav-item dropdown d-none d-sm-inline">
+                 <a class="nav-link nav-position" href="aboutPage.html">ABOUT US <i class="bi bi-chevron-down ms-1"></i> </a>
+                <ul class="dropdown-content bg-light">
+                  <li>
+                    <a href="aboutPage.html#thePillarSection">The Pillar</a>
+                  </li>
+                  <li>
+                    <a href="aboutPage.html#CEGP">Membership and Alliance</a>
+                  </li>
+                  <li>
+                    <a href="aboutPage.html#editorialBoard">Editorial Board</a>
+                  </li>
+                </ul>
+               </li>
+
+
+               <li class="nav-item d-sm-none">
+                <a class="nav-link nav-position" href="aboutPage.html">ABOUT US <i class="bi bi-chevron-down ms-1 d-none d-md-inline"></i> </a>
+                <ul class="list-content bg-light">
+                  <li>
+                    <a href="aboutPage.html#thePillarSection">The Pillar</a>
+                  </li>
+                  <li>
+                    <a href="aboutPage.html#CEGP">Membership and Alliance</a>
+                  </li>
+                  <li>
+                    <a href="aboutPage.html#editorialBoard">Editorial Board</a>
+                  </li>
+                </ul>
+               </li>
+
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link nav-position" href="contactus.html">CONTACT US</a>
+               </li> 
+               </ul>
+           </div>
+        </div>
+      </nav>
+      <!--end of the second nav-->
+
+      <div class="container-lg">
+        <div class="row my-4 justify-content-center">
+         <div class="col-8 col-lg-4">
+             <form class="d-flex" role="search">
+                 <input class="form-control me-2" id="search-issue" type="search" placeholder="Search" aria-label="Search">
+                 <a class="btn btn-secondary"  onclick="searchIssue()" type="submit" type="submit"><i class="bi bi-search text-light link-light-secondary"></i></a>
+               </form>
+         </div>
+        </div>
+ 
+        <!--choices-->
+        <div class="row g-1 my-4 d-flex justify-content-center gap-2">
+ 
+         <!--date published-->
+         <div class="col-6 col-md-3">
+           <div class="dropdown-width">
+             <button class="btn btn-secondary dropdown-btn d-flex justify-content-between align-items-center" id="arrowButton" onclick="displayIssuesByDatePublished()" aria-expanded="false">
+               <span>Date Published</span>
+               <i class="bi bi-arrow-up arrow" id="arrow-icon"></i>
+             </button>
+           </div>
+         </div>
+ 
+ 
+ 
+         <!--category dropdown-->
+         <div class="col-6 col-md-3">
+           <div class="dropdown dropdown-width">
+             <button class="btn btn-secondary dropdown-toggle dropdown-btn d-flex justify-content-between align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+               <span>Category</span>
+               <ul class="dropdown-menu">
+                 <li><a class="dropdown-item" href="#" onclick="displayIssuesByCategory('')">All</a></li>
+                 <li><a class="dropdown-item" href="#" onclick="displayIssuesByCategory('LF')">Literary Folio</a></li>
+                 <li><a class="dropdown-item" href="#" onclick="displayIssuesByCategory('N')">Newsletter</a></li>
+                 <li><a class="dropdown-item" href="#" onclick="displayIssuesByCategory('SM')">Sports Magazine</a></li>
+                 <li><a class="dropdown-item" href="#" onclick="displayIssuesByCategory('T')">Tabloid</a></li>   
+               </ul>
+             </button>
+           </div>
+         </div>
+ 
+ 
+       </div>
+     </div>
+    <!--end of choices-->
+
+    <!--start of the content-->
+    <div class="container-lg my-5" id="contentsPanelHome">
+        <div class="row d-flex justify-content-center" id="issueRow">
+  
+          <div class="col-12" id="contentsFirstColumnPanelHome">
+            <h3 class="fw-bold pb-1" id="show-search-input"></h3>
+            <h1 class="fw-bold" id="paginate-here"></h1>
+            <hr><hr>
+            <div class="p-1">
+  
+             <!--1st-->
+             <div class="row row-cols-4" id="issue-container">
+              <!-- ISSUES GO HERE -->
+             </div> <!--end of the row of id="article-container"-->
+  
+  
+               <!--pagination-->
+               <nav aria-label="Page navigation example">
+                 <ul class="pagination justify-content-center pt-4" id="issue-nav">
+                   <!-- <li class="page-item">
+                     <a class="page-link" href="#" aria-label="Previous">
+                       <span aria-hidden="true">&laquo;</span>
+                     </a>
+                   </li>
+                   <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                   <li class="page-item"><a class="page-link" href="#">2</a></li>
+                   <li class="page-item"><a class="page-link" href="#">3</a></li>
+                   <li class="page-item">
+                     <a class="page-link" href="#" aria-label="Next">
+                       <span aria-hidden="true">&raquo;</span>
+                     </a>
+                   </li> -->
+                 </ul>
+               </nav>
+            </div>
+  
+  
+  
+            </div>
+          </div>
+        </div>
+    <!--end of the content-->
+
+  
+
+
+
+  
+
+  <!-- As a footer -->
+  <nav class="navbar bg-primary">
+
+    <div class="container-xl d-flex flex-column-reverse flex-md-row justify-content-center align-items-center text-light p-1">
+      <div class="col text-center">
+        <small>Copyright © 2023 The Pillar. All rights reserved.</small>
+  
+      </div>
+      <div class="col text-center">
+  
+        <small class="pe-1">Follow us on: </small> <a href="https://www.facebook.com/thepillaryueps"> <i class="bi bi-facebook text-light"></i> </a>
+      </div>
+     </div>
+  
+  </nav>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script src="/js/get_account.js"></script>
+  <script src="/js/login.js"></script>
+  <script src="/js/issue.js"></script>
+  <script>
+    loadAccount();
+    listIssues();
+  </script>
+</body>
+</html>

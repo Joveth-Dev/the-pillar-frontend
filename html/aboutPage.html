@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT THE PILLLAR</title>
+
+
+
+      <!--Bootstrap Icons-->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+   
+      <!--Stylesheets-->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+      <link rel="stylesheet" href="/css/main.min.css">
+      <link rel="stylesheet" href="/css/custom.css">
+
+      
+</head>
+<body>
+        <!--navigation bar-->
+
+        <nav class="navbar navbar-expand-md bg-primary justify-content-center d-flex flex-column" id="nav-main-links">
+
+            <!--first row-->
+           <div class="row container-xxl">
+      
+            <!--col for The Pillar Logo-->
+            <div class="col-6 col-md-3 d-flex justify-content-center align-items-center">
+     
+              <a class="navbar-brand nav-logo" href="/index.html">
+              <img src="/images/The Pillar Logo - white.png" class="nav-logo-img" alt="The Pillar">
+              </a>
+            </div>
+      
+      
+            <!--col for the search bar-->
+            <!-- <div class="col-7 col-md-5">
+              <form class="d-flex me-md-5" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-search btn-outline-secondary" type="submit">Search</button>
+              </form>
+            </div> -->
+      
+      
+            <!-- Button trigger modal -->
+            <div class="col-6 d-flex justify-content-end align-items-center" id="profile-btn-div">
+              <button type="button" class="btn p-0" data-bs-toggle="modal" data-bs-target="#exampleModal" id="modal-btn">
+                  <i class="bi bi-person-circle text-secondary fs-1"></i>
+              </button>
+              <!-- <a href="html/userProfile.html">
+                <button type="button" class="btn p-0" data-bs-toggle="modal" data-bs-target="#exampleModal" id="modal-btn">
+                  <div class="user-profile-img">
+                    <img src="/images/1 claridette.jpg" alt="">
+                  </div>
+                </button>
+              </a> -->
+            </div>
+          </nav>
+      
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Welcome, Reader!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                   
+                    <form action="" class=" border border-primary rounded p-5" id="log-in-form">
+          
+                      <div class="form-header text-center">
+                        <img src="/images/The Pillar Logo.png" class="w-25" alt="">
+                        <h2 class="fw-bold text-primary">LOG IN</h2>
+                      </div>
+                
+                      <label for="Username" class="fw-bold">Username</label>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text"><i class="bi bi-person-fill text-primary"></i></span>
+                        <input type="text" class="form-control" placeholder="Username" id="Username" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                
+                      <label for="Password" class="fw-bold">Password</label>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text"> <i class="bi bi-key-fill text-primary"></i></span>
+                        <input type="password" class="form-control" placeholder="Password" id="Password" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+
+                      <div class="alert alert-danger d-flex align-items-center mt-1 d-none" role="alert" id="login-div">
+                        <i class="bi bi-exclamation-diamond-fill pe-2"></i>
+                        <div id="login-error">
+                          <!-- LOGIN ERROR MESSAGE GO HERE -->
+                        </div>
+                      </div>
+                
+                      <button class="btn btn-primary col-12 fw-bold" type="button" onclick="getInputs()">LOG IN</button>
+                      <h6 class="mt-2 mb-4 text-center"> <a href="forgotPass.html" class="text-decoration-none">Forgot Password?</a> </h6>
+                
+                      <a class="btn btn-secondary col-12 fw-bold text-light" href="/html/sign-up.html">SIGN UP</a>
+                      </form>
+                      
+                  </div>
+          
+                </div>
+              </div>
+            </div>
+            <!--end of Modal-->
+            
+          </div>
+      
+          <!--End of first Nav-->
+      
+      
+      
+            <!--Start of second nav-->
+            <nav class="navbar nav-pills nav-fill navbar-expand-sm d-flex justify-content-md-center bg-light bottom-shadow sticky-top"     
+            id="nav-links">
+    
+    
+    
+            <button class="navbar-toggler w-100 d-flex justify-content-between ms-3 me-3 d-inline d-sm-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fw-bold m-auto">Menu</span>
+                <span class="navbar-toggler-icon"></span>
+              </button>
+    
+      
+           
+            <div class="row container-lg">
+             <div class="col collapse navbar-collapse" id="main-nav">
+                 <ul class="col navbar-nav fw-bold">
+                   <li class="nav-item">
+                     <a class="nav-link nav-position" href="../index.html">HOME</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link nav-position" href="/html/article.html">ARTICLES</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link nav-position" href="../html/issue.html">ISSUES</a>
+                   </li>
+                   <li class="nav-item dropdown d-none d-sm-inline">
+                     <a class="nav-link nav-position active" aria-current="page" href="aboutPage.html">ABOUT US <i class="bi bi-chevron-down ms-1"></i> </a>
+                    
+                     <ul class="dropdown-content bg-light">
+                      <li>
+                        <a href="#thePillarSection">The Pillar</a>
+                      </li>
+                      <li>
+                        <a href="#CEGP">Membership and Alliance</a>
+                      </li>
+                      <li>
+                        <a href="#editorialBoard">Editorial Board</a>
+                      </li>
+                    </ul>
+                   </li>
+    
+    
+                   <li class="nav-item d-sm-none">
+                    <a class="nav-link nav-position active" aria-current="page" href="aboutPage.html">ABOUT US <i class="bi bi-chevron-down ms-1 d-none d-md-inline"></i> </a>
+                    <ul class="list-content bg-light">
+                      <li>
+                        <a href="#thePillarSection">The Pillar</a>
+                      </li>
+                      <li>
+                        <a href="#CEGP">Membership and Alliance</a>
+                      </li>
+                      <li>
+                        <a href="#editorialBoard">Editorial Board</a>
+                      </li>
+                    </ul>
+                   </li>
+    
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link nav-position" href="contactus.html">CONTACT US</a>
+                   </li> 
+                   </ul>
+               </div>
+            </div>
+          </nav>
+          <!--end of second nav-->
+    
+          
+          <!--about us banner-->
+
+          <div class="container-fluid panel-about d-flex flex-column-reverse flex-md-row justify-content-center align-items-center thePillarBackground">
+
+                  
+
+            <div class="col d-flex flex-column justify-content-start justify-content-md-center align-items-center">
+              <h1 class="display-1 fw-bold text-light">
+                <span class="initialCapital">T</span>HE <span class="initialCapital">P</span>ILLAR
+            </h1>
+            <p class="lead text-light fs-3 d-none d-lg-block">CRITICAL. FEARLESS. UNAPOLOGETIC.</p>
+            <p class="lead text-light fs-5 d-lg-none">CRITICAL. FEARLESS. UNAPOLOGETIC.</p>
+
+            </div>
+            <div class="col the-logo-img d-flex justify-content-center align-items-end align-items-lg-center">
+             <img src="/images/The Pillar Logo.png" alt="">
+            </div>
+   
+     </div>
+
+           <!--what is pillar-->
+
+           
+           <div class="container-lg" id="thePillarSection">
+            <div class="row row-cols-2 m-2 d-flex justify-content-center align-items-center flex-sm-row">
+              <div class="col-12 col-md-6">
+                <h1 class="text-about-us">What is</h1>
+                <h1 class="display-1 fw-bold text-about-us"> THE PILLAR?</h1>
+                <p class="lead lead-about-us">
+                  The Pillar is the Official Student Publication of the University of Eastern Philippines - Main Campus. The Pillar is critical, fearless, and unapologetic.
+                </p>
+              </div>
+
+
+              <div class="col-12 col-md-6">
+                <img src="/images/The Pillar Logo.png" alt="" class="w-100">
+              </div>
+            </div>
+           </div>
+          
+
+           <!--CEGP-->
+           <div class="container-lg" id="CEGP">
+            <div class="row row-cols-2 m-2 d-flex justify-content-center align-items-center flex-column-reverse flex-md-row">
+
+
+              <div class="col-12 col-md-6">
+                <img src="/images/cegp logo.jpg" alt="" class="w-100">
+              </div>
+
+              <div class="col-12 col-md-6">
+                <h1 class="display-4 display-md-1 fw-bold text-about-us">COLLEGE EDITORS GUILD OF THE PHILIPPINES</h1>
+                <h2 class="fst-italic text-secondary text-about-us">Membership and Alliance</h2>
+                <p class="lead lead-about-us">
+                  The Pillar is the Official Student Publication of the University of Eastern Philippines - Main Campus. The Pillar is critical, fearless, and unapologetic.
+                </p>
+              </div>
+            </div>
+           </div>
+
+           <!--The Pillar Editorial Board-->
+          <div class="container-lg" id="editorialBoard">
+            <div class="col w-100 mt-5">
+              <h1 class="display-2 fw-bold text-center">
+                <span class="initialCapital">T</span>he  <span class="initialCapital">P</span>illar</h1>
+            </div>
+
+
+            <!--nav-tabs    d-none d-sm-flex-->
+            <ul class="nav nav-pills nav-fill justify-content-start align-items-center" id="tabs-tab" role="tablist">
+
+              <div class="col centerAlignment">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active p-0 p-md-2" id="pills-all-members-tab" data-bs-toggle="pill" data-bs-target="#pills-all-members" type="button" role="tab" aria-controls="pills-all-members" aria-selected="true">All</button>
+                </li>
+              </div>
+
+              <div class="col">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link d-none d-md-inline" id="pills-editorial-board-tab" data-bs-toggle="pill" data-bs-target="#pills-editorial-board" type="button" role="tab" aria-controls="pills-editorial-board" aria-selected="false">Editorial Board</button>
+
+                  <button class="nav-link d-inline d-md-none p-0" id="pills-editorial-board-tab" data-bs-toggle="pill" data-bs-target="#pills-editorial-board" type="button" role="tab" aria-controls="pills-editorial-board" aria-selected="false">EB</button>
+
+                </li>
+              </div>
+
+              <div class="col">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link d-none d-md-inline" id="pills-staff-writers-tab" data-bs-toggle="pill" data-bs-target="#pills-staff-writers" type="button" role="tab" aria-controls="pills-staff-writers" aria-selected="false">Staff Writers</button>
+
+                  <button class="nav-link d-inline d-md-none p-0" id="pills-staff-writers-tab" data-bs-toggle="pill" data-bs-target="#pills-staff-writers" type="button" role="tab" aria-controls="pills-staff-writers" aria-selected="false">SW</button>
+                 
+                </li>
+              </div>
+
+              <div class="col">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link d-none d-md-inline" id="pills-cartoonists-tab" data-bs-toggle="pill" data-bs-target="#pills-cartoonists" type="button" role="tab" aria-controls="pills-cartoonists" aria-selected="false">Cartoonists</button>
+
+                  <button class="nav-link d-inline d-md-none p-0" id="pills-cartoonists-tab" data-bs-toggle="pill" data-bs-target="#pills-cartoonists" type="button" role="tab" aria-controls="pills-cartoonists" aria-selected="false">CT</button>
+
+                </li>
+              </div>
+
+              <div class="col">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link d-none d-md-inline" id="pills-photojournalists-tab" data-bs-toggle="pill" data-bs-target="#pills-photojournalists" type="button" role="tab" aria-controls="pills-photojournalists" aria-selected="false">Photojournalists</button>
+
+                  <button class="nav-link  d-inline d-md-none p-0" id="pills-photojournalists-tab" data-bs-toggle="pill" data-bs-target="#pills-photojournalists" type="button" role="tab" aria-controls="pills-photojournalists" aria-selected="false">PJ</button>
+
+                </li>
+              </div>
+
+              <div class="col">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link d-none d-md-inline" id="pills-layout-artists-tab" data-bs-toggle="pill" data-bs-target="#pills-layout-artists" type="button" role="tab" aria-controls="pills-layout-artists" aria-selected="false">Layout Artists</button>
+
+                  <button class="nav-link d-inline d-md-none p-0" id="pills-layout-artists-tab" data-bs-toggle="pill" data-bs-target="#pills-layout-artists" type="button" role="tab" aria-controls="pills-layout-artists" aria-selected="false">LA</button>
+                </li>
+              </div>
+
+              <div class="col">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link  d-none d-md-inline" id="pills-other-members-tab" data-bs-toggle="pill" data-bs-target="#pills-other-members" type="button" role="tab" aria-controls="pills-other-members" aria-selected="false">Other Members</button>
+
+                  <button class="nav-link d-inline d-md-none p-0" id="pills-other-members-tab" data-bs-toggle="pill" data-bs-target="#pills-other-members" type="button" role="tab" aria-controls="pills-other-members" aria-selected="false">OM</button>
+                </li>
+              </div>
+            </ul>
+
+
+            
+
+            <!----pills-->
+            <div class="tab-content" id="pills-tabContent">
+
+              <!--all members of The Pillar-->
+
+              <div class="tab-pane fade show active" id="pills-all-members" role="tabpanel" aria-labelledby="pills-all-members-tab" tabindex="0">
+                <div class="container-fluid">
+                  <div class="container-lg vh-auto justify-content-center">
+                    <div class="row justify-content-center" id="editorial_board">
+                      <div class=" w-100 my-2">
+                        <h1 class="display-3 fw-bold text-center">Editorial Board</h1>
+                        <p class="lead text-center">Academic Year 2022-2023</p>
+                      </div>
+      
+                      <div class="row g-1 w-100">
+                        <div class="col d-flex flex-column justify-content-center align-items-center" id="eic">
+                          <!-- EDITOR-IN-CHIEF GO HERE -->
+                        </div>
+                      </div>
+                      <div class="row row-cols-3" id="other-editrorial-members">
+                        <!-- OTHER EDITORIAL BOARD MEMBERS GO HERE -->
+                      </div>
+
+                      <!--end of the Editorial Board-->
+      
+                      <!--Start of Staff Writers-->
+      
+                      <div class="row row-cols-3" id="Staff-Writers">
+      
+                        
+                        <div class="row w-100 mt-5" id="Staff-Writters">
+                          <div class="col d-flex flex-column justify-content-start align-items-start">
+                            <h2 class="fw-bold thePillarProfilePosition">STAFF WRITERS</h2>
+                          </div>
+                        </div>
+                        <!-- STAFF WRITERS GO HERE -->
+                      </div>
+      
+                      <!--End of Staff Writers-->
+      
+                      <!--Start of Cartoonists-->
+                      <div class="row row-cols-3 mt-5" id="cartoonists">
+      
+                        <div class="row w-100 mt-5">
+                          <div class="col d-flex flex-column justify-content-start align-items-start">
+                            <h2 class="fw-bold thePillarProfilePosition">CARTOONISTS</h2>
+                          </div>
+                        </div>
+                        <!-- CARTOONIST GE HERE -->
+                      </div>
+      
+                      <!--end of Cartoonists-->
+      
+                      <!--start of Photojournalists-->
+                      <div class="row row-cols-3 mt-5" id="Photojournalists">
+
+                        <div class="row w-100 mt-5">
+                          <div class="col d-flex flex-column justify-content-start align-items-start">
+                            <h2 class="fw-bold thePillarProfilePosition">PHOTOJOURNALISTS</h2>
+                          </div>
+                        </div>
+                        <!-- PHOTOJOURNALISTS GO HERE -->
+                      </div>
+      
+                      <!--end of Photojournalists-->
+      
+                      <!--start of layout artists-->
+                      <div class="row row-cols-3 mt-5 p-0" id="layoutArtists">
+      
+                        <div class="row w-100 mt-5">
+                          <div class="col d-flex flex-column justify-content-start align-items-start">
+                            <h2 class="fw-bold thePillarProfilePosition">LAYOUT ARTISTS</h2>
+                          </div>
+                        </div>
+                        <!-- LAYOUT ARTISTS GO HERE -->
+                      </div>
+      
+                      <!--end of layout artists-->
+      
+                      <div class="row row-cols-3" id="other-eb-members">
+                        <!-- OTHER EB MEMBERS GO HERE -->
+                      </div>
+                    </div>
+                  </div>
+                 </div>
+              </div>
+              <!--end of all members of The Pillar-->
+              
+
+              <!--start of editorial board-->
+              <div class="tab-pane fade mt-2" id="pills-editorial-board" role="tabpanel" aria-labelledby="pills-editorial-board-tab" tabindex="0">
+
+                <div class="row d-inline d-md-none" id="Editorial-Board">
+                  <div class="col d-flex flex-column justify-content-start align-items-start mt-3 ms-3">   
+                    <h2 class="fw-bold thePillarProfilePosition">EDITORIAL BOARD</h2>
+                  </div>
+                </div>
+
+                <div class="row g-1 w-100">
+                  <div class="col d-flex flex-column justify-content-center align-items-center" id="eic-section">
+                    <!-- EDITOR-IN-CHIEF SECTION GO HERE -->
+                  </div>
+                </div>
+
+                <div class="row row-cols-3" id="Editorial-Board-section">
+                  <!-- OTHER EDITORIAL BOARD MEMBERS SECTION GO HERE -->
+                </div>
+              </div>
+              <!--end of the editorial board-->
+
+              <!--start of staff writers-->
+              <div class="tab-pane fade" id="pills-staff-writers" role="tabpanel" aria-labelledby="pills-staff-writers-tab" tabindex="0">
+                
+                <div class="row d-inline d-md-none" id="Staff-Writters">
+                  <div class="col d-flex flex-column justify-content-start align-items-start mt-3 ms-3">   
+                    <h2 class="fw-bold thePillarProfilePosition">STAFF WRITERS</h2>
+                  </div>
+                </div>
+
+
+                <div class="row row-cols-3 mb-4" id="Staff Editor">
+                  <!-- STAFF WRITERS SECTION GO HERE -->
+                </div>
+              </div>
+              <!--end of staff writers-->
+
+              <!--start of cartoonist-->
+              <div class="tab-pane fade" id="pills-cartoonists" role="tabpanel" aria-labelledby="pills-cartoonists-tab" tabindex="0">
+
+                <div class="row d-inline d-md-none" id="Cartoonists">
+                  <div class="col d-flex flex-column justify-content-start align-items-start mt-3 ms-3">   
+                    <h2 class="fw-bold thePillarProfilePosition">CARTOONISTS</h2>
+                  </div>
+                </div>
+
+                <div class="row row-cols-3 mb-4" id="cartoonists-section">
+                  <!-- CARTOONIST SECTION GO HERE -->
+                </div>
+              </div>
+              <!--end of cartoonists-->
+
+              <!--start photojournalists-->
+              <div class="tab-pane fade" id="pills-photojournalists" role="tabpanel" aria-labelledby="pills-photojournalists-tab" tabindex="0">
+             
+                <div class="row d-inline d-md-none" id="Photojournalists">
+                  <div class="col d-flex flex-column justify-content-start align-items-start mt-3 ms-3">   
+                    <h2 class="fw-bold thePillarProfilePosition">PHOTOJOURNALISTS</h2>
+                  </div>
+                </div>
+
+
+
+
+                <div class="row row-cols-3 mb-4" id="Photojournalists-section">
+                  <!-- PHOTOJOURNALIST SECTION GO HERE -->
+                </div>
+              </div>
+              <!--end of photojournalists-->
+
+              <!--start of the layout-artists-->
+              <div class="tab-pane fade" id="pills-layout-artists" role="tabpanel" aria-labelledby="pills-layout-artists-tab" tabindex="0">
+               
+                <div class="row d-inline d-md-none" id="LayoutArtists">
+                  <div class="col d-flex flex-column justify-content-start align-items-start mt-3 ms-3">   
+                    <h2 class="fw-bold thePillarProfilePosition">LAYOUT ARTISTS</h2>
+                  </div>
+                </div>
+
+
+
+                <div class="row row-cols-3 mb-4" id="layoutArtists-section">
+                  <!-- LAYOUT ARTIST SECTION GO HERE -->
+                </div>
+              </div>
+              <!--end of the layout artists-->
+
+              <!--start of other staffs-->
+              <div class="tab-pane fade" id="pills-other-members" role="tabpanel" aria-labelledby="pills-other-members-tab" tabindex="0">
+
+
+                <div class="row d-inline d-md-none" id="LayoutArtists">
+                  <div class="col d-flex flex-column justify-content-start align-items-start mt-3 ms-3">   
+                    <h2 class="fw-bold thePillarProfilePosition">OTHER MEMBERS</h2>
+                  </div>
+                </div>
+
+
+
+                <div class="row row-cols-3 mb-4" id="other-members-section">
+                  <!-- OTHER MEMBERS SECTION GO HERE -->
+                </div>
+              </div>
+              <!--end of other staffs-->
+             </div>
+          </div>
+
+
+
+ 
+
+           
+
+
+  <!-- As a footer -->
+  <nav class="navbar bg-primary">
+
+    <div class="container-xl d-flex flex-column-reverse flex-md-row justify-content-center align-items-center text-light p-1">
+      <div class="col text-center">
+        <small>Copyright © 2023 The Pillar. All rights reserved.</small>
+  
+      </div>
+      <div class="col text-center">
+  
+        <small class="pe-1">Follow us on: </small> <a href="https://www.facebook.com/thepillaryueps"> <i class="bi bi-facebook text-light"></i> </a>
+      </div>
+     </div>
+  
+  </nav>
+
+    
+  
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script src="/js/get_account.js"></script>
+  <script src="/js/login.js"></script>
+  <script src="/js/about_us.js"></script>
+  <script>
+    loadAccount();
+    listMembers('editorial_board');
+  </script>
+</body>
+</html>

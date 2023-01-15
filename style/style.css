@@ -1,0 +1,89 @@
+:root {
+    --primary-color: #001e5b;
+    --secondary-color: #ff9966;
+    --white: #fff;
+
+  }
+
+.img-logo{
+    height: 10rem;
+}
+
+.icon{
+    font-size: 2rem;
+    padding-left: 0.5rem;
+    color: var(--white);
+}
+
+.account-link{
+    color: var(--white);
+}
+
+.nav-item>.nav-link{
+    color: var(--white);
+}
+
+.navbar-bg{
+    background-color: var(--primary-color);
+}
+
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler{
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+
+.nav-link:hover,
+.icon:hover{
+    color: var(--secondary-color);
+}
+
+.form-search{
+    margin-right: 5rem;
+}
+
+.form-login{
+    width: 25vw;
+    height: 80vh;
+    border: 2px solid var(--primary-color);
+    border-radius: 1rem;
+
+}
+
+
+.form-login-inputs{
+    width: 90%;
+}
+
+.btn-search{
+   border:1px solid var(--secondary-color);
+   color: var(--secondary-color);
+}
+
+.btn-search:hover{
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.img-carousel{
+    object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+    .img-carousel{
+        height: 90vh;
+    }
+
+    .banner-title{
+        font-size: 5rem;
+    }
+}
+
+

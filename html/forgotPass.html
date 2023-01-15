@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORGOT PASSWORD</title>
+    
+    <!--Bootstrap Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+   
+    <!--Javascript-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="/css/main.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+
+    
+</head>
+<body>
+
+  <!--navigation bar when in signup and log in-->
+
+  <nav class="navbar bg-primary">
+    <div class="container-xxl justify-content-center">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/images/The Pillar Logo - white.png" alt="Bootstrap"  height="40">
+            </a>
+    </div>
+</nav>
+
+
+
+
+
+  <!--ACCOUNT CREATION-->
+
+  <div class="container-lg" id="forgotPasswordContainer">
+    
+    <div class="forgot-pass-main active" id="FindAccount">
+
+      <div class="text-center" id="forgotPasswordHeader">
+        <i class="bi bi-search icon-forgot-pass"></i>
+        <div class="">
+          <h3 class="fw-bold text-primary" id="forgotPassHeaderTitle">Find Your Account</h3>
+        </div>
+
+      </div>
+
+    <p>Enter the email address to receive the password reset link. The email address should be associated with your account.</p>
+
+    <form action="">
+      <input type="text" class="form-control" placeholder="" id="Email-input" aria-label="Email-input">
+      <span id="continue-message"></span>
+
+      <button class="btn btn-secondary col-12 fw-bold text-light mt-2" id="continue-btn" type="button" onclick="sendEmail()">SEND</button>
+    </form>
+
+    </div>
+
+ </div>
+
+ <!-- forgot pass -->
+ <nav class="navbar bg-primary">
+
+  <div class="container-xl d-flex flex-column-reverse flex-md-row justify-content-center align-items-center text-light p-1">
+    <div class="col text-center">
+      <small>Copyright © 2023 The Pillar. All rights reserved.</small>
+
+    </div>
+    <div class="col text-center">
+
+      <small class="pe-1">Follow us on: </small> <a href="https://www.facebook.com/thepillaryueps"> <i class="bi bi-facebook text-light"></i> </a>
+    </div>
+   </div>
+
+</nav>
+  
+
+
+        <!--script-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <script src="/js/forgot_password.js"></script>
+     </body>
+    </html>
