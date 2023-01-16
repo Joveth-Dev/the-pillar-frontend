@@ -129,6 +129,7 @@ function articleElement(article) {
     const article_outer_div = document.createElement('div');
     const article_div = document.createElement('div');
     let category = article.category;
+    let author = article.author;
     let article_img = '', article_img_alt = '';
 
     // set up article_div
@@ -195,9 +196,11 @@ function articleElement(article) {
     }
     if(category == 'E'){
         category = 'EDITORIAL';
+        author = '';
     }
     if(category == 'CL'){
         category = 'COLUMN';
+        author = `by ${article.pen_name}`;
     }
 
     // format date_published
@@ -208,13 +211,8 @@ function articleElement(article) {
     // input category, date_published, title_or_headline, & body
     article_div.innerHTML += `<h5 class="article-title">${article.title_or_headline}</h5>
                                 <div class="article-view-category">${category}</div>
-                                <div class="article-writer" id="author">
-                                </div>
+                                <span class="article-name-of-writer">${author}</span>
                                 <div class="article-date-published">${date_published}</div>`;
-
-    if(category !== 'EDITORIAL'){
-        document.getElementById('author').innerHTML = `BY <span class="article-name-of-writer">${article.author}</span>`;
-    }
 
     article_outer_div.appendChild(article_div);
 
