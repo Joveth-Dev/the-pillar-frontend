@@ -208,10 +208,13 @@ function articleElement(article) {
     // input category, date_published, title_or_headline, & body
     article_div.innerHTML += `<h5 class="article-title">${article.title_or_headline}</h5>
                                 <div class="article-view-category">${category}</div>
-                                <div class="article-writer">BY
-                                    <span class="article-name-of-writer">${article.author}</span>
+                                <div class="article-writer" id="author">
                                 </div>
                                 <div class="article-date-published">${date_published}</div>`;
+
+    if(category !== 'EDITORIAL'){
+        document.getElementById('author').innerHTML = `BY <span class="article-name-of-writer">${article.author}</span>`;
+    }
 
     article_outer_div.appendChild(article_div);
 
