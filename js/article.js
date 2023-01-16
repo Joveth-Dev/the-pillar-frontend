@@ -209,7 +209,7 @@ function articleElement(article) {
     article_div.innerHTML += `<h5 class="article-title">${article.title_or_headline}</h5>
                                 <div class="article-view-category">${category}</div>
                                 <div class="article-writer">BY
-                                    <span class="article-name-of-writer">${article.full_name}</span>
+                                    <span class="article-name-of-writer">${article.author}</span>
                                 </div>
                                 <div class="article-date-published">${date_published}</div>`;
 
