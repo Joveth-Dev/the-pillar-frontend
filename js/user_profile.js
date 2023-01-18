@@ -277,6 +277,8 @@ function editAccount(){
 }
 
 function saveAccountChanges(){
+    // document.getElementById('save-btn').disabled = true;
+
     // get input values
     let last_name = document.getElementById('Last-name').value;
     let first_name = document.getElementById('First-name').value;
@@ -315,6 +317,7 @@ function saveAccountChanges(){
     }else{
         // display error
         document.getElementById('account-div').setAttribute('class', 'alert alert-danger d-flex flex-row justify-content-start align-items-start mt-1 d-block');
+        // document.getElementById('save-btn').disabled = false;
     }
     
 }
@@ -402,6 +405,9 @@ function editProfile(){
         edit_btn.textContent = 'Save';
     }
     else if(edit_btn.textContent === 'Save'){
+        // disable save button first
+        document.getElementById('edit-button').disabled = true;
+
         // make array of input elements
         const inputs_array = [birth_date, sex, city, state, zip_code, country];
         
@@ -448,10 +454,12 @@ function editProfile(){
                 // prompt user that no changes were detected
                 document.getElementById('profile-div').setAttribute('class', 'alert alert-warning d-flex align-items-center mt-1 d-block');
                 document.getElementById('profile-error').textContent = 'No changes detected!';
+                document.getElementById('edit-button').disabled = false;
             }
         }else{
             document.getElementById('profile-div').setAttribute('class', 'alert alert-danger d-flex align-items-center mt-1 d-block');
             document.getElementById('profile-error').textContent = 'All fields are required!';
+            document.getElementById('edit-button').disabled = false;
         }
     }
 }
@@ -493,6 +501,9 @@ function changePassword(){
 }
 
 function save(){
+    // disable save changes button first
+    document.getElementById('save-changes-btn').disabled = true;
+
     // get input values
     let curr_pass = document.getElementById('Current-Password').value;
     let new_pass = document.getElementById('New-Password').value;
@@ -518,14 +529,17 @@ function save(){
                 if(data.current_password){
                     document.getElementById('change-pass-div').setAttribute('class', 'alert alert-danger d-flex align-items-center mt-1 d-block');
                     document.getElementById('change-pass-error').textContent = data.current_password.join(' ');
+                    document.getElementById('save-changes-btn').disabled = false;
                 }
                 if(data.new_password){
                     document.getElementById('change-pass-div').setAttribute('class', 'alert alert-danger d-flex align-items-center mt-1 d-block');
                     document.getElementById('change-pass-error').textContent = data.new_password.join(' ');
+                    document.getElementById('save-changes-btn').disabled = false;
                 }
                 if(data.non_field_errors){
                     document.getElementById('change-pass-div').setAttribute('class', 'alert alert-danger d-flex align-items-center mt-1 d-block');
                     document.getElementById('change-pass-error').textContent = data.non_field_errors.join(' ');
+                    document.getElementById('save-changes-btn').disabled = false;
                 }
             }else{
                 localStorage.setItem('changed_pass', true);
@@ -537,6 +551,7 @@ function save(){
     else{
         document.getElementById('change-pass-div').setAttribute('class', 'alert alert-danger d-flex align-items-center mt-1 d-block');
         document.getElementById('change-pass-error').textContent = 'All fields are required!';
+        document.getElementById('save-changes-btn').disabled = false;
     }
 }
 
@@ -707,6 +722,9 @@ upload_input.addEventListener('input', (event) => {
 });
 
 function uploadProfilePicture(){
+    // disable upload button first
+    document.getElementById('upload-btn').disabled = true;
+
     let picture_input = document.getElementById('profilePictureUploadInput');
     
     let picture = picture_input.files[0];
@@ -722,6 +740,7 @@ function uploadProfilePicture(){
             if(data.avatar){
                 document.getElementById('upload-div').setAttribute('class', 'alert alert-danger d-flex flex-row justify-content-start align-items-start mt-1 d-block')
                 document.getElementById('upload-error').textContent = data.avatar.join(' ');
+                document.getElementById('upload-btn').disabled = false;
             }
         }else{
             document.getElementById('upload-div').setAttribute('class', 'alert alert-success d-flex flex-row justify-content-start align-items-start mt-1 d-block')
@@ -781,6 +800,8 @@ function cancelUpload(){
 
 // -------------------------------- FOR LOGGING OUT --------------------------------
 function logout(){
+    // disable log-out button first
+    document.getElementById('log-out').disabled = true
     localStorage.clear();
     localStorage.setItem('signed-up', true);
     window.location.href = '/the-pillar-frontend/index.html'

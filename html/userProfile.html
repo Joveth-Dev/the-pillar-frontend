@@ -115,7 +115,7 @@
               <button class="nav-link mb-md-2" id="v-pills-security-tab" data-bs-toggle="pill" data-bs-target="#v-pills-security" type="button" role="tab" aria-controls="v-pills-security" aria-selected="false">Security</button>
               <div class="col-md d-flex justify-content-center align-items-end">
                 <button class="border border-3 border-danger rounded p-2 logout-btn d-none d-md-inline" type="button" onclick="logout()">LOG OUT</button>
-                <i class="bi bi-box-arrow-right logout-icon d-inline d-md-none" type="button" onclick="logout()"></i>
+                <i class="bi bi-box-arrow-right logout-icon d-inline d-md-none" type="button" onclick="logout()" id="log-out"></i>
               </div>
             </div>
 
@@ -585,7 +585,7 @@
                           </div>
   
                           <div class="d-flex flex-row gap-1 justify-content-end align-items-end mt-1">
-                            <button type="button" class="btn btn-secondary text-light fw-bold" onclick="save()">Save Changes</button>
+                            <button type="button" class="btn btn-secondary text-light fw-bold" onclick="save()" id="save-changes-btn">Save Changes</button>
                             <button type="button" class="btn btn-primary fw-bold" onclick="cancel('change-pass')">Cancel</button>
                           </div>
 

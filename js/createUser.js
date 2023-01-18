@@ -8,6 +8,9 @@ var account_created = false, logged_in = false, profile_created = false, account
 
 // -------------------------- FOR VALIDATING 2ND SECTION ---------------------------
 function validateFirstSectionInputFields(){
+  // disable continue button first
+  document.getElementById('continue-btn').disabled = true;
+
   let input_arr = [];
 
   input_arr.push(document.getElementById('Username').value);
@@ -26,11 +29,13 @@ function validateFirstSectionInputFields(){
       // show that passwords don't match
       document.getElementById('account-div').setAttribute('class', 'alert alert-danger d-flex align-items-center mt-1 d-block');
       document.getElementById('account-error').textContent = 'Passwords do not match!'
+      document.getElementById('continue-btn').disabled = false;
     }
   }else{
     // show that all fields are required
     document.getElementById('account-div').setAttribute('class', 'alert alert-danger d-flex align-items-center mt-1 d-block');
     document.getElementById('account-error').textContent = 'All fields are required!'
+    document.getElementById('continue-btn').disabled = false;
   }
 }
 
@@ -43,20 +48,26 @@ function displayAccountCreationError(error_json){
   if(error_json.email){
     document.getElementById('account-div').setAttribute('class', 'alert alert-danger d-flex align-items-center mt-1 d-block');
     document.getElementById('account-error').textContent = error_json.email.join(' ');
+    document.getElementById('continue-btn').disabled = false;
   }
   if(error_json.password){
     document.getElementById('account-div').setAttribute('class', 'alert alert-danger d-flex align-items-center mt-1 d-block');
     document.getElementById('account-error').textContent = error_json.password.join(' ');
+    document.getElementById('continue-btn').disabled = false;
   }
   if(error_json.username){
     document.getElementById('account-div').setAttribute('class', 'alert alert-danger d-flex align-items-center mt-1 d-block');
     document.getElementById('account-error').textContent = error_json.username.join(' ');
+    document.getElementById('continue-btn').disabled = false;
   }
 }
 // ---------------------------------------------------------------------------------
 
 // ------------------------ FOR VALIDATING 2ND SECTION ---------------------------
 function validateSecondSectionInputFields(){
+  // disable submit button first
+  document.getElementById('submit-btn').disabled = true;
+
   let input_arr = [];
 
   input_arr.push(document.getElementById('Last-name').value);
@@ -81,16 +92,19 @@ function validateSecondSectionInputFields(){
         // display that zip_code is invalid
         document.getElementById('profile-div').setAttribute('class', 'alert alert-danger d-flex align-items-center mt-1 d-block');
         document.getElementById('profile-error').textContent = 'Invalid ZIP code!';
+        document.getElementById('submit-btn').disabled = false;
       }
     }else{
       // display that user must be 13 years older
       document.getElementById('profile-div').setAttribute('class', 'alert alert-danger d-flex align-items-center mt-1 d-block');
       document.getElementById('profile-error').textContent = 'You must be 13 years old or above!';
+      document.getElementById('submit-btn').disabled = false;
     }
   }else{
     // display there's a required field that is empty
     document.getElementById('profile-div').setAttribute('class', 'alert alert-danger d-flex align-items-center mt-1 d-block');
     document.getElementById('profile-error').textContent = 'All fields are required except for MI!';
+    document.getElementById('submit-btn').disabled = false;
   }
 }
 
@@ -144,6 +158,7 @@ function createAccount(){
           document.getElementById('account-error').textContent = 'Account created successfully!';
           setTimeout(function() {
             next();
+            document.getElementById('continue-btn').disabled = false;
           }, 2000);
         }else{
           throw new Error(`Process failed : ${data}`);
