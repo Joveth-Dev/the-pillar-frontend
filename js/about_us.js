@@ -40,35 +40,8 @@ function listMembers(memberContainerElement) {
 // Populate editorial board
 function displayEB(json_response) {
     const eic_div = document.getElementById('eic'); // Editor-in-chief
-    const other_eb_div = document.getElementById('other-editrorial-members'); // Other editorial board members' div
-    let other_eb_positions = ["Associate Editor", "Managing Editor", "Culture Editor", "News Editor", "Feature Editor"];
 
     // display Editor-in-Chief
-    for(let member of json_response){
-        if (member.current_position == "Editor-in-Chief"){
-            let image_src;
-            
-            if (member.avatar === ''){
-                if(member.sex == 'N'){
-                    image_src = "/the-pillar-frontend/default_profile_imgs/default_no_sex.jpg";
-                }
-                if(member.sex == 'M'){
-                    image_src = "/the-pillar-frontend/default_profile_imgs/default_male.jpg";
-                }
-                if(member.sex == 'F'){
-                    image_src = "/the-pillar-frontend/default_profile_imgs/default_female.jpg";
-                }
-            }
-            else{
-                image_src = member.avatar;
-            }
-            eic_div.innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
-                                    <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
-                                    <p class="lead  thePillarProfilePosition">${member.current_position}</p>`;
-        }
-    };
-
-    // display other editorial members
     for(let member of json_response){
         let image_src;
         
@@ -86,12 +59,41 @@ function displayEB(json_response) {
         else{
             image_src = member.avatar;
         }
-        if(other_eb_positions.includes(member.current_position)){
-            other_eb_div.innerHTML += `<div class="col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer">
-                                            <img class="thePillarProfilePicture" src="${image_src}"/>
-                                            <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
-                                            <p class="lead thePillarProfilePosition">${member.current_position}</p>
-                                        </div>`;
+
+        if (member.current_position.toLowerCase() === "editor-in-chief"){
+            eic_div.innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
+                                    <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
+                                    <p class="lead  thePillarProfilePosition">${member.current_position}</p>`;
+        }
+        if (member.current_position.toLowerCase() === "associate editor"){
+            document.getElementById('associate-editor').setAttribute('class', 'col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer d-block')
+            document.getElementById('associate-editor').innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
+                                                                        <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
+                                                                        <p class="lead thePillarProfilePosition">${member.current_position}</p>`;
+        }
+        if (member.current_position.toLowerCase() === "managing editor"){
+            document.getElementById('managing-editor').setAttribute('class', 'col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer d-block')
+            document.getElementById('managing-editor').innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
+                                                                        <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
+                                                                        <p class="lead thePillarProfilePosition">${member.current_position}</p>`;
+        }
+        if (member.current_position.toLowerCase() === "culture editor"){
+            document.getElementById('culture-editor').setAttribute('class', 'col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer d-block')
+            document.getElementById('culture-editor').innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
+                                                                        <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
+                                                                        <p class="lead thePillarProfilePosition">${member.current_position}</p>`;
+        }
+        if (member.current_position.toLowerCase() === "news editor"){
+            document.getElementById('news-editor').setAttribute('class', 'col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer d-block')
+            document.getElementById('news-editor').innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
+                                                                        <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
+                                                                        <p class="lead thePillarProfilePosition">${member.current_position}</p>`;
+        }
+        if (member.current_position.toLowerCase() === "feature editor"){
+            document.getElementById('feature-editor').setAttribute('class', 'col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer d-block')
+            document.getElementById('feature-editor').innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
+                                                                        <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
+                                                                        <p class="lead thePillarProfilePosition">${member.current_position}</p>`;
         }
     };
 }
@@ -101,8 +103,6 @@ function displayOtherMembers(json_response) {
     const cartoonist_div = document.getElementById('cartoonists');
     const photojournalists_div = document.getElementById('Photojournalists');
     const layout_artists_div = document.getElementById('layoutArtists');
-    let other_members_div = document.getElementById('other-eb-members');
-    let other_member_arr = ["Financial Adviser", "Technical Adviser", "Assistant Financial Manager", "Financial Manager"];
     
     for(const member of json_response){
         let image_src;
@@ -121,71 +121,62 @@ function displayOtherMembers(json_response) {
         else{
             image_src = member.avatar;
         }
-        if(member.current_position == "Staff Writters"){
+
+        if(member.current_position.toLowerCase() === "staff writters"){
             staff_writer_div.innerHTML += `<div class="col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer">
                                                 <img class="thePillarProfilePicture" src="${image_src}"/>
                                                 <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
                                             </div>`;
         }
-        if(member.current_position == "Cartoonist"){
+        if(member.current_position.toLowerCase() === "cartoonist"){
             cartoonist_div.innerHTML += `<div class="col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer">
                                             <img class="thePillarProfilePicture" src="${image_src}"/>
                                             <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
                                         </div>`;
         }
-        if(member.current_position == "Photojournalist"){
+        if(member.current_position.toLowerCase() === "photojournalist"){
             photojournalists_div.innerHTML += `<div class="col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer">
                                                     <img class="thePillarProfilePicture" src="${image_src}"/>
                                                     <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
                                                 </div>`;
         }
-        if(member.current_position == "Layout Artist"){
+        if(member.current_position.toLowerCase() === "layout artist"){
             layout_artists_div.innerHTML += `<div class="col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer">
                                                     <img class="thePillarProfilePicture" src="${image_src}"/>
                                                     <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
                                                 </div>`;
         }
-        if(other_member_arr.includes(member.current_position)){
-            other_members_div.innerHTML += `<div class="col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer">
-                                                <img class="thePillarProfilePicture" src="${image_src}"/>
-                                                <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
-                                                <p class="lead thePillarProfilePosition">${member.current_position}</p>
-                                            </div>`;
+        if(member.current_position.toLowerCase() === 'financial adviser'){
+            document.getElementById('financial-adviser').setAttribute('class', 'col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer d-block')
+            document.getElementById('financial-adviser').innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
+                                                                        <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
+                                                                        <p class="lead thePillarProfilePosition">${member.current_position}</p>`;
+        }
+        if(member.current_position.toLowerCase() === 'technical adviser'){
+            document.getElementById('technical-adviser').setAttribute('class', 'col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer d-block')
+            document.getElementById('technical-adviser').innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
+                                                                        <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
+                                                                        <p class="lead thePillarProfilePosition">${member.current_position}</p>`;
+        }
+        if(member.current_position.toLowerCase() === 'finance manager'){
+            document.getElementById('finance-manager').setAttribute('class', 'col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer d-block')
+            document.getElementById('finance-manager').innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
+                                                                        <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
+                                                                        <p class="lead thePillarProfilePosition">${member.current_position}</p>`;
+        }
+        if(member.current_position.toLowerCase() === 'assistant finance manager'){
+            document.getElementById('assistant-finance-manager').setAttribute('class', 'col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer d-block')
+            document.getElementById('assistant-finance-manager').innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
+                                                                        <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
+                                                                        <p class="lead thePillarProfilePosition">${member.current_position}</p>`;
         }
     }
 }
 
 function displayEBsection(json_response){
     const eic_div = document.getElementById('eic-section'); // Editor-in-chief
-    const other_eb_div = document.getElementById('Editorial-Board-section'); // Other editorial board members' div
-    let other_eb_positions = ["Associate Editor", "Managing Editor", "Culture Editor", "News Editor", "Feature Editor"];
 
     // display Editor-in-Chief
-    for(let member of json_response){
-        if (member.current_position == "Editor-in-Chief"){
-            let image_src;
-            
-            if (member.avatar == ''){
-                if(member.sex == 'N'){
-                    image_src = "/the-pillar-frontend/default_profile_imgs/default_no_sex.jpg";
-                }
-                if(member.sex == 'M'){
-                    image_src = "/the-pillar-frontend/default_profile_imgs/default_male.jpg";
-                }
-                if(member.sex == 'F'){
-                    image_src = "/the-pillar-frontend/default_profile_imgs/default_female.jpg";
-                }
-            }
-            else{
-                image_src = member.avatar;
-            }
-            eic_div.innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
-                                    <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
-                                    <p class="lead  thePillarProfilePosition">${member.current_position}</p>`;
-        }
-    };
-
-    // display other editorial members
     for(let member of json_response){
         let image_src;
         
@@ -203,12 +194,41 @@ function displayEBsection(json_response){
         else{
             image_src = member.avatar;
         }
-        if(other_eb_positions.includes(member.current_position)){
-            other_eb_div.innerHTML += `<div class="col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer">
-                                            <img class="thePillarProfilePicture" src="${image_src}"/>
-                                            <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
-                                            <p class="lead thePillarProfilePosition">${member.current_position}</p>
-                                        </div>`;
+
+        if (member.current_position.toLowerCase() === "editor-in-chief"){
+            eic_div.innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
+                                    <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
+                                    <p class="lead  thePillarProfilePosition">${member.current_position}</p>`;
+        }
+        if (member.current_position.toLowerCase() === "associate editor"){
+            document.getElementById('associate-editor-sec').setAttribute('class', 'col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer d-block')
+            document.getElementById('associate-editor-sec').innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
+                                                                        <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
+                                                                        <p class="lead thePillarProfilePosition">${member.current_position}</p>`;
+        }
+        if (member.current_position.toLowerCase() === "managing editor"){
+            document.getElementById('managing-editor-sec').setAttribute('class', 'col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer d-block')
+            document.getElementById('managing-editor-sec').innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
+                                                                        <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
+                                                                        <p class="lead thePillarProfilePosition">${member.current_position}</p>`;
+        }
+        if (member.current_position.toLowerCase() === "culture editor"){
+            document.getElementById('culture-editor-sec').setAttribute('class', 'col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer d-block')
+            document.getElementById('culture-editor-sec').innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
+                                                                        <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
+                                                                        <p class="lead thePillarProfilePosition">${member.current_position}</p>`;
+        }
+        if (member.current_position.toLowerCase() === "news editor"){
+            document.getElementById('news-editor-sec').setAttribute('class', 'col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer d-block')
+            document.getElementById('news-editor-sec').innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
+                                                                        <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
+                                                                        <p class="lead thePillarProfilePosition">${member.current_position}</p>`;
+        }
+        if (member.current_position.toLowerCase() === "feature editor"){
+            document.getElementById('feature-editor-sec').setAttribute('class', 'col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer d-block')
+            document.getElementById('feature-editor-sec').innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
+                                                                        <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
+                                                                        <p class="lead thePillarProfilePosition">${member.current_position}</p>`;
         }
     };
 }
@@ -218,14 +238,12 @@ function displayOtherMembersSection(json_response){
     const cartoonist_div = document.getElementById('cartoonists-section');
     const photojournalists_div = document.getElementById('Photojournalists-section');
     const layout_artists_div = document.getElementById('layoutArtists-section');
-    let other_members_div = document.getElementById('other-members-section');
-    let other_member_arr = ["Financial Adviser", "Technical Adviser", "Assistant Financial Manager", "Financial Manager"];
 
     // display other EB members
     for(const member of json_response){
         let image_src;
-        
-        if (member.avatar == ''){
+          
+        if (member.avatar === ''){
             if(member.sex == 'N'){
                 image_src = "/the-pillar-frontend/default_profile_imgs/default_no_sex.jpg";
             }
@@ -239,36 +257,54 @@ function displayOtherMembersSection(json_response){
         else{
             image_src = member.avatar;
         }
-        if(member.current_position == "Staff Writters"){
+
+        if(member.current_position.toLowerCase() === "staff writters"){
             staff_writer_div.innerHTML += `<div class="col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer">
                                                 <img class="thePillarProfilePicture" src="${image_src}"/>
                                                 <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
                                         </div>`;
         }
-        if(member.current_position == "Cartoonist"){
+        if(member.current_position.toLowerCase() === "cartoonist"){
             cartoonist_div.innerHTML += `<div class="col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer">
                                             <img class="thePillarProfilePicture" src="${image_src}"/>
                                             <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
                                         </div>`;
         }
-        if(member.current_position == "Photojournalist"){
+        if(member.current_position.toLowerCase() === "photojournalist"){
             photojournalists_div.innerHTML += `<div class="col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer">
                                                     <img class="thePillarProfilePicture" src="${image_src}"/>
                                                     <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
                                                 </div>`;
         }
-        if(member.current_position == "Layout Artist"){
+        if(member.current_position.toLowerCase() === "layout artist"){
             layout_artists_div.innerHTML += `<div class="col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer">
                                                 <img class="thePillarProfilePicture" src="${image_src}"/>
                                                 <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
                                             </div>`;
         }
-        if(other_member_arr.includes(member.current_position)){
-            other_members_div.innerHTML += `<div class="col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer">
-                                                <img class="thePillarProfilePicture" src="${image_src}"/>
-                                                <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
-                                                <p class="lead thePillarProfilePosition">${member.current_position}</p>
-                                            </div>`;
+        if(member.current_position.toLowerCase() === 'financial adviser'){
+            document.getElementById('financial-adviser-sec').setAttribute('class', 'col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer d-block')
+            document.getElementById('financial-adviser').innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
+                                                                        <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
+                                                                        <p class="lead thePillarProfilePosition">${member.current_position}</p>`;
+        }
+        if(member.current_position.toLowerCase() === 'technical adviser'){
+            document.getElementById('technical-adviser-sec').setAttribute('class', 'col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer d-block')
+            document.getElementById('technical-adviser-sec').innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
+                                                                        <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
+                                                                        <p class="lead thePillarProfilePosition">${member.current_position}</p>`;
+        }
+        if(member.current_position.toLowerCase() === 'finance manager'){
+            document.getElementById('finance-manager-sec').setAttribute('class', 'col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer d-block')
+            document.getElementById('finance-manager-sec').innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
+                                                                        <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
+                                                                        <p class="lead thePillarProfilePosition">${member.current_position}</p>`;
+        }
+        if(member.current_position.toLowerCase() === 'assistant finance manager'){
+            document.getElementById('assistant-finance-manager-sec').setAttribute('class', 'col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer d-block')
+            document.getElementById('assistant-finance-manager-sec').innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
+                                                                        <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
+                                                                        <p class="lead thePillarProfilePosition">${member.current_position}</p>`;
         }
     }
 }
