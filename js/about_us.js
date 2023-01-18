@@ -284,7 +284,7 @@ function displayOtherMembersSection(json_response){
         }
         if(member.current_position.toLowerCase() === 'financial adviser'){
             document.getElementById('financial-adviser-sec').setAttribute('class', 'col-6 col-lg-4 d-flex flex-column justify-content-center align-items-center thePillarProfileContainer d-block')
-            document.getElementById('financial-adviser').innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
+            document.getElementById('financial-adviser-sec').innerHTML += `<img class="thePillarProfilePicture" src="${image_src}"/>
                                                                         <h3 class="thePillarProfilePictureName">${member.full_name}</h3>
                                                                         <p class="lead thePillarProfilePosition">${member.current_position}</p>`;
         }

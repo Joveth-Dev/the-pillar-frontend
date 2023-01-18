@@ -37,6 +37,9 @@ async function fetchData(data){
 
 // FOR GETTING USERNAME AND PASSWORD INPUTS
 function getInputs(){
+    // disable log-in buttun first
+    document.getElementById('login-btn').disabled = true;
+
     let username = document.getElementById('Username');
     let password = document.getElementById('Password');
     let login_div = document.getElementById('login-div');
@@ -58,6 +61,7 @@ function getInputs(){
             }else{
                 login_div.setAttribute('class', 'alert alert-danger d-flex align-items-center mt-1 d-block');
                 login_error.textContent = data.detail;
+                document.getElementById('login-btn').disabled = false;
             }
         })
         .catch(error => console.log(error))
@@ -74,6 +78,7 @@ function validateInputs(){
     if(username === '' || password === ''){
         login_div.setAttribute('class', 'alert alert-danger d-flex align-items-center mt-1 d-block');
         login_error.textContent = 'Username and password are required';
+        document.getElementById('login-btn').disabled = false;
     }else{
         return true;
     }
