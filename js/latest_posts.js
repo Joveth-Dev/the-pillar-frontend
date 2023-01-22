@@ -114,7 +114,7 @@ function articleElement(article) {
 
     // set date_published
     var date_published = new Date(article.date_published);
-    date_published = `${date_published.getMonth()}/${date_published.getDate()}/${date_published.getFullYear()}`;
+    date_published = `${date_published.getMonth()+1}/${date_published.getDate()}/${date_published.getFullYear()}`;
 
     // input category, date_published, title_or_headline, & body
     article_div.innerHTML += `<div class="body-card">
