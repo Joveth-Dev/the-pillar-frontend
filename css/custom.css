@@ -1119,12 +1119,9 @@ hr{
     width: 15rem;
     height: 15rem;
     border-radius: 50%;
+    border: 2px solid #dedede;
+    box-shadow: 3px 0 #dedede;
 }
-
-
-
-
-
 
 
 .thePillarProfilePictureName{
