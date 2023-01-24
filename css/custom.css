@@ -1288,6 +1288,12 @@ hr{
     height: auto;
 }
 
+@media screen and (max-width: 768px) {
+    .issue-container{
+        width: 70vw;
+    }
+}
+
 .issue-title{
     font-weight: bold;
     text-transform: uppercase;
@@ -1298,5 +1304,11 @@ hr{
     display: flex;
     justify-content: space-between;
     margin: 1.5rem 0;
+}
+
+.issue-description{
+    width: 100%;
+    text-align: justify;
+    font-style: italic;
 }
 

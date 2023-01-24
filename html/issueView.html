@@ -167,6 +167,10 @@
                     <span id="issue-category"></span>
                     <span id="issue-date-published"></span>               
                 </div>                
+
+                <p class="issue-description" id="issue-description">
+                  <!-- ISSUE DESCRIPTION GO HERE -->
+                </p>
         </div>
     </div>
 
@@ -349,7 +353,10 @@
         let date_published = new Date(issue_data.date_published);
         date_published = `${monthNames[date_published.getMonth()]} ${date_published.getDate()}, ${date_published.getFullYear()}`.toUpperCase();
 
-        document.getElementById('issue-date-published').textContent += date_published;
+        document.getElementById('issue-date-published').textContent = date_published;
+
+        // display description
+        document.getElementById('issue-description').textContent = issue_data.description;
       }
       
       let issue_link = await getIssueFile()
